@@ -1,0 +1,15 @@
+.column {
+
+    display: flex;
+    /* background-color: aqua; */
+    margin: 5px;
+    gap: 5px;
+    justify-content: center;
+
+}
+
+.row {
+
+    background-color: rgb(113, 85, 216);
+    padding: 10px;
+}
