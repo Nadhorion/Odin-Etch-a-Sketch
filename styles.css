@@ -2,14 +2,19 @@
 
     display: flex;
     /* background-color: aqua; */
-    margin: 5px;
-    gap: 5px;
+    /* margin: 5px;
+    gap: 5px; */
     justify-content: center;
 
 }
 
 .row {
 
-    background-color: rgb(113, 85, 216);
+    background-color: rgb(221, 216, 236);
     padding: 10px;
+}
+
+.row.filled {
+
+    background-color: rgb(153, 188, 219);
 }

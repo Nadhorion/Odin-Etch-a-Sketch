@@ -12,6 +12,8 @@ function makeGrid(length, width) {
 
             const rowDiv = document.createElement('div');
             rowDiv.classList.add('row');
+            rowDiv.addEventListener('mouseenter', 
+                (event) => event.target.classList.add('filled'))
             columnDiv.appendChild(rowDiv);
 
         }
@@ -21,4 +23,4 @@ function makeGrid(length, width) {
     }
 }
 
-makeGrid(20, 20);
+makeGrid(16, 16);
