@@ -13,8 +13,7 @@ function makeGrid(length, width) {
 
             const rowDiv = document.createElement('div');
             rowDiv.classList.add('row');
-            rowDiv.addEventListener('mouseenter', 
-                (event) => event.target.classList.add('filled'))
+            rowDiv.addEventListener('mouseenter', modifyDiv);
             columnDiv.appendChild(rowDiv);
 
         }
@@ -22,6 +21,31 @@ function makeGrid(length, width) {
         grid.appendChild(columnDiv);
 
     }
+}
+
+function modifyDiv(event) {
+    event.target.classList.add('filled');
+    event.target.style.backgroundColor = randomRGB();
+    const currentOpacity = event.target.style.opacity;
+    event.target.style.opacity = opacityDecrement(currentOpacity);
+   
+}
+
+function opacityDecrement(currentOpacity) {
+    if (+currentOpacity > 0) {
+        return "" + (currentOpacity - 0.1);
+    } else if (currentOpacity === "") {
+        return "0.9";
+    } else {
+        return "0.0";
+    }
+}
+
+function randomRGB() {
+    let r = Math.floor((Math.random() * 255)) + 1;
+    let g = Math.floor((Math.random() * 255)) + 1;
+    let b = Math.floor((Math.random() * 255)) + 1;
+    return `rgb( ${r}, ${g}, ${b})`;
 }
 
 function removeOldGrid() {
@@ -44,7 +68,7 @@ function promptGridSize() {
         && Math.floor(gridSize) === gridSize 
         && gridSize <= 100
         && gridSize > 0) {
-            
+
         makeGrid(gridSize, gridSize)
 
     } else {
@@ -54,3 +78,4 @@ function promptGridSize() {
 
 const newGridButton = document.querySelector('button');
 newGridButton.addEventListener('click', promptGridSize);
+makeGrid(16, 16);
