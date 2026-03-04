@@ -1,17 +1,27 @@
+#grid {
+
+    width: 75vw;
+    height: 75vw;
+    justify-self: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+}
+
 .column {
 
     display: flex;
-    /* background-color: aqua; */
-    /* margin: 5px;
-    gap: 5px; */
-    justify-content: center;
-
+    flex: auto;
+    
+    
 }
 
 .row {
 
+    flex: auto;
     background-color: rgb(221, 216, 236);
-    padding: 10px;
+    /* align-self: stretch; */
 }
 
 .row.filled {

@@ -23,4 +23,4 @@ function makeGrid(length, width) {
     }
 }
 
-makeGrid(16, 16);
+makeGrid(50, 50);
