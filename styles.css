@@ -2,8 +2,8 @@
 
     width: 75vh;
     height: 75vh;
-    justify-self: center;
-    margin: 10px;
+    margin: auto;
+    /* margin: 10px; */
     display: flex;
     flex-direction: column;
     flex: auto;
@@ -31,6 +31,7 @@
 
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 10px;
 
 }
 
